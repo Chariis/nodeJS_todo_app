@@ -13,17 +13,10 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-
-      - name: Azure CLI Login with Username/Password #Not recommended for production use a service principal instead
-        run: |
-          az login -u ${{ secrets.AZURE_USERNAME }} -p ${{ secrets.AZURE_PASSWORD }}
-          az account show
-      
-      # Uncomment the following lines if you want to use a service principal for authentication
-      # name: Log in to Azure 
-      #  uses: azure/login@v1
-      #  with:
-      #    creds: ${{ secrets.AZURE_CREDENTIALS }}
+      - name: Log in to Azure 
+        uses: azure/login@v1
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
 
       - name: Build and push Docker image to ACR
         uses: azure/docker-login@v1
