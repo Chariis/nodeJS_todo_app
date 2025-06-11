@@ -42,7 +42,7 @@ See: [.github/workflows/deploy-to-azure.yml](.github/workflows/deploy-to-azure.y
         +-----------------> GitHub Actions (CI/CD)
         |                        |
         |                        v
-        |            Docker Build & Push to ACR
+        |         Docker Build & Push to ACR
         |                        |
         |                        v
 +----------------+        +--------------+
@@ -51,7 +51,7 @@ See: [.github/workflows/deploy-to-azure.yml](.github/workflows/deploy-to-azure.y
 +----------------+        +--------------+
                                  ^
                                  |
-                        Dockerized Python App
+                             Dockerized Python App
 
 ---
 
